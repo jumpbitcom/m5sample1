@@ -15,7 +15,6 @@
   These functions are generated with the Thing and added at the end of this sketch.
 */
 
-#include "thingProperties.h"
 #include <Wire.h>
 #include <SHTSensor.h>
 #include <M5Stack.h>
@@ -50,16 +49,16 @@ void setup() {
   M5.Lcd.setTextSize(4);
 
  
-  ArduinoCloud.begin(ArduinoIoTPreferredConnection);
-  setDebugMessageLevel(2);
-  ArduinoCloud.printDebugInfo();
+//  ArduinoCloud.begin(ArduinoIoTPreferredConnection);
+//  setDebugMessageLevel(2);
+//  ArduinoCloud.printDebugInfo();
 
   
 
 }
  
 void loop() {
-  ArduinoCloud.update();
+//  ArduinoCloud.update();
 
   static int pixelNumber = 0;  // = random(0, M5STACK_FIRE_NEO_NUM_LEDS - 1);
 
@@ -112,6 +111,7 @@ void loop() {
       M5.Lcd.print(letzteLuftfeuchtigkeit);
     }
   }
+ 
   /*ArduinoCloud.update();
 
   static int pixelNumber=0;       // = random(0, M5STACK_FIRE_NEO_NUM_LEDS - 1);
